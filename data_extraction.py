@@ -9,4 +9,11 @@ df = pd.read_csv("desafio_indicium_imdb.csv")
 # df['Meta_score'].fillna(df['Meta_score'].mean(), inplace=True)
 # df.dropna(inplace=True)
 
+# Analyzing IMDB distribution
+plt.figure(figsize=(10, 6))
+sns.histplot(df['IMDB_Rating'], bins=20, kde=True)
+plt.title('IMDB Rating Distribution')
+plt.show()
+
+
 print('texto pro debug')
